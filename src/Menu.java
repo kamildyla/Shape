@@ -9,27 +9,30 @@ public class Menu {
         System.out.println("- calculate the volume of the sphere  (3)");
         Scanner sc = new Scanner(System.in);
         System.out.print("Choose action: ");
-        int choose = sc.nextInt();
+        String choose = sc.nextLine();
 
         switch (choose) {
-            case 1: {
+            case "1": {
                 Circle circleF = new Circle();
                 circleF.setR();
                 circleF.setActive();
+                circleF.data("Radius: ");
                 System.out.println("Field: " + (circleF.getActive() * circleF.field()));
             } break;
 
-            case 2: {
+            case "2": {
                 Sphere sphereF = new Sphere();
                 sphereF.setR();
                 sphereF.setActive();
+                sphereF.data("Radius: ");
                 System.out.println("Field: " + (sphereF.getActive() * sphereF.field()));
             } break;
 
-            case 3: {
+            case "3": {
                 Sphere sphereV = new Sphere();
                 sphereV.setR();
                 sphereV.setActive();
+                sphereV.data("Radius: ");
                 System.out.println("Volume: " + (sphereV.getActive() * sphereV.volume()));
             } break;
 

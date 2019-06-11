@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main (String[] args) {
 
-        boolean flag = false;
+        boolean flag;
 
         System.out.println("Simple calculator returns field of volume of figures");
 
@@ -16,7 +16,7 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             String valid = sc.next();
 
-            if (valid.equals("y") || valid.equals("Y")) {
+            if (valid.equalsIgnoreCase("y")) {
                 flag = true;
                 System.out.println(" ");
             }
@@ -24,7 +24,7 @@ public class Main {
                 flag = false;
             }
         }
-        while (flag == true);
+        while (flag);
 
         System.out.println("See You next time ;)");
     }

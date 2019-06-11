@@ -22,4 +22,9 @@ public class Sphere extends Shape {
     public void setActive() {
         super.setActive();
     }
+
+    @Override
+    public void data(String factor) {
+        super.data(factor);
+    }
 }
