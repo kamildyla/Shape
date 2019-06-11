@@ -20,8 +20,8 @@ public class Shape {
     // methods
     Scanner sc = new Scanner(System.in);
 
-    public void data() {
-        System.out.println("side = " + r);
+    public void data(String factor) {
+        System.out.println(factor + r);
     }
 
     public double field ()
@@ -29,9 +29,8 @@ public class Shape {
         return r*r;
     }
 
-    // getters
     public int getActive() {
-        if (active == true) {
+        if (active) {
             return 1;
         }
         else return 0;
@@ -42,14 +41,13 @@ public class Shape {
         return r;
     }
 
-    // setters
     public void setActive () {
         boolean a = false;
         System.out.println(" ");
         System.out.println("Only for active figures, calculations are possible");
         System.out.print("Do you want to activate the figure (y/n) ?:  ");
         String x = sc.next();
-        if (x.equals("y") || x.equals("Y")) {
+        if (x.equalsIgnoreCase("y")) {
             a = true;
         }
         active = a;
@@ -57,7 +55,6 @@ public class Shape {
 
     public void setR ()
     {
-        // try, catch
         try {
             double b = sc.nextDouble();
             this.r = b;
